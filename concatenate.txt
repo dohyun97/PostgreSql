@@ -1,0 +1,4 @@
+select concat(name,' is a memeber of ',club) as membership
+from yrb_customer,yrb_member
+where yrb_customer.cid=yrb_member.cid
+order by name;

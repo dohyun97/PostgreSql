@@ -1,0 +1,16 @@
+((select cid
+from yrb_member 
+where club='Basic')
+except
+(select cid
+from yrb_member 
+where club='Oprah'))
+union
+((select cid
+from yrb_member 
+where club='Oprah')
+except
+(select cid
+from yrb_member 
+where club='Basic'))
+order by cid;

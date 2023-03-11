@@ -1,0 +1,6 @@
+select x.title,x.year,x.qnty,x.whenp
+from yrb_purchase x
+left join yrb_purchase y
+on x.qnty < y.qnty 
+where y.whenp=(select min(whenp) from yrb_purchase z where z.whenp>x.whenp)
+order by x.title,x.year,x.qnty,x.whenp;

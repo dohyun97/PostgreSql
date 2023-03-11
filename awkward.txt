@@ -1,0 +1,3 @@
+select title,translate(title,'aeiouAEIOU','') as stripped1,year,replace(cast (year as varchar(4)),'0','') as stripped2
+from yrb_book
+order by title,year;

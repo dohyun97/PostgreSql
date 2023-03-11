@@ -1,0 +1,7 @@
+(select cat,sum(weight) as weight
+from yrb_book
+group by cat
+order by cat,weight)
+union all
+(select 'Total',sum(weight)
+from yrb_book);

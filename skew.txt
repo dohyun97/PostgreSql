@@ -1,0 +1,3 @@
+select sum(weight)*1.0/(select count(*)-2 from yrb_book) as averageWeight
+from yrb_book
+where yrb_book.weight>(select min(weight) from yrb_book) and yrb_book.weight<(select max(weight) from yrb_book);

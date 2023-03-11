@@ -1,0 +1,3 @@
+select cast(sum(weight)*100.0/(select sum(weight) from yrb_book)as decimal(5,2)) as percentage
+from yrb_book 
+where yrb_book.year=1999 ;

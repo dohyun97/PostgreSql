@@ -1,0 +1,6 @@
+select cid
+from yrb_member
+group by cid
+Having count(club)=2 and
+cid IN((select cid from yrb_member where club='Basic')intersect (select cid from yrb_member where club='Oprah'))
+order by cid;
